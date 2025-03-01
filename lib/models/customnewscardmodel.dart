@@ -1,6 +1,7 @@
 class Customnewscardmodel {
+final String image;
 final String text;
-  final String image;
+  
 
-  Customnewscardmodel({required this.text, required this.image});
+  Customnewscardmodel({ required this.image,required this.text});
 }
