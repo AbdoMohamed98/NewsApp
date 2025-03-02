@@ -18,12 +18,14 @@ final List<Customnewscardmodel> customcards = [
 ];
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-          child: ListView.builder(
-             scrollDirection: Axis.horizontal,
-            itemCount:customcards.length,
-            itemBuilder: (context, index) => Customnewscard(modeldata: customcards[index]),
-             ),
-        );
+    return SizedBox(
+      height: 150, // Set fixed height
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: customcards.length,
+        itemBuilder: (context, index) =>
+            Customnewscard(modeldata: customcards[index]),
+      ),
+    );
   }
 }
