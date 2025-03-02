@@ -9,28 +9,32 @@ class Customnewscard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.center,
-      children: [
-        Container(
-          height: 150,
-          width: 200,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(modeldata.image),
-              fit: BoxFit.cover,
+    return Padding(
+      padding: const EdgeInsets.only(right: 20),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
+            height: 150,
+            width: 200,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              image: DecorationImage(
+                image: AssetImage(modeldata.image),
+                fit: BoxFit.cover,
+              ),
             ),
           ),
-        ),
-        Text(
-          modeldata.text,
-          style: const TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
+          Text(
+            modeldata.text,
+            style: const TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

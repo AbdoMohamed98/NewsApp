@@ -6,7 +6,7 @@ class Horizontallistview extends StatelessWidget {
    Horizontallistview({super.key});
 final List<Customnewscardmodel> customcards = [
     Customnewscardmodel( image: 'assets/image1.jpg', text: 'business'),
-    Customnewscardmodel( image: 'assets/image3.jpg', text: 'economy'),
+     Customnewscardmodel( image: 'assets/image2.jpg', text: 'arts'),
     Customnewscardmodel( image: 'assets/image3.jpg', text: 'science'),
      Customnewscardmodel( image: 'assets/image1.jpg', text: 'sports'),
     Customnewscardmodel( image: 'assets/image2.jpg', text: 'arts'),

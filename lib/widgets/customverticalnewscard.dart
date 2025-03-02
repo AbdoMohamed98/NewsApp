@@ -7,7 +7,7 @@ class Customverticalnewscard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 50,top: 15,left: 10,right: 10),
+      padding: const EdgeInsets.only(bottom: 50,top: 15),
       child: Container(
         height: 200,
         width: 200,
