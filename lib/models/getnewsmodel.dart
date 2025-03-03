@@ -1,13 +1,15 @@
 class Getnewsmodel {
   final String title;
   final String description;
-  final String image;
+  final String? image; // Nullable for better safety
 
-  Getnewsmodel(
-      {required this.title, required this.description, required this.image});
-  factory Getnewsmodel.fromjson(jsonData) {
-    return Getnewsmodel(title: jsonData['results'][0]['title'],
-     description:jsonData['results'][0]['description'] ,
-      image: jsonData['results'][0]['image_url']);
+  Getnewsmodel({required this.title, required this.description, this.image});
+
+  factory Getnewsmodel.fromjson(Map<String, dynamic> jsonData) {
+    return Getnewsmodel(
+      title: jsonData['title'] ?? 'No Title',
+      description: jsonData['description'] ?? 'No Description',
+      image: jsonData['image_url'], // Nullable field
+    );
   }
 }
