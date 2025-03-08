@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/models/customnewscardmodel.dart';
-import 'package:newsapp/widgets/customnewscard.dart';
+import 'package:newsapp/widgets/customhorizontalnewscard.dart';
 
 class Horizontallistview extends StatelessWidget {
    Horizontallistview({super.key});
@@ -24,7 +24,7 @@ final List<Customnewscardmodel> customcards = [
         scrollDirection: Axis.horizontal,
         itemCount: customcards.length,
         itemBuilder: (context, index) =>
-            Customnewscard(modeldata: customcards[index]),
+            Customhorizontalnewscard(modeldata: customcards[index]),
       ),
     );
   }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/models/customnewscardmodel.dart';
 
-class Customnewscard extends StatelessWidget {
-  const Customnewscard({
+class Customhorizontalnewscard extends StatelessWidget {
+  const Customhorizontalnewscard({
     super.key, required this.modeldata,
   });
   final Customnewscardmodel modeldata;
