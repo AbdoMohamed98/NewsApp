@@ -21,16 +21,16 @@ class Getnewsservice {
     };
   }
 
-  Future<List<Getnewsmodel>> getNews() async {
+  Future<List<Getnewsmodel>> getNews({required String categoryname}) async {
     List<Getnewsmodel> getnewslist = [];
     try {
       Response response = await dio.get(
-          'https://newsdata.io/api/1/latest?apikey=pub_727166b461d320ffaa3af654b858506804c26&category=sports');
+          'https://newsdata.io/api/1/latest?apikey=pub_727166b461d320ffaa3af654b858506804c26&category=$categoryname,world&language=en&country=au,gb');
 
       if (response.statusCode == 200) {
         Map<String, dynamic> newsdata = response.data;
         List<dynamic> results = newsdata['results'];
-       
+      
         for (var result in results) {
           Getnewsmodel getnewsmodel = Getnewsmodel.fromjson(result);
 

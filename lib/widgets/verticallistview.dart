@@ -9,6 +9,6 @@ class Verticallistview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Futurebuilderwidget();
+    return Futurebuilderwidget(category: 'world',);
   }
 }

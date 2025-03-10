@@ -1,11 +1,13 @@
+
 import 'package:flutter/material.dart';
+import 'package:newsapp/models/customnewscardmodel.dart';
 import 'package:newsapp/models/getnewsmodel.dart';
 import 'package:newsapp/services/getnewsservice.dart';
 import 'package:newsapp/widgets/customverticalnewscard.dart';
 
 class Futurebuilderwidget extends StatefulWidget {
-  const Futurebuilderwidget({super.key});
-
+  const Futurebuilderwidget({super.key, required this.category});
+  final String category;
   @override
   State<Futurebuilderwidget> createState() => _FuturebuilderwidgetState();
 }
@@ -19,11 +21,11 @@ class _FuturebuilderwidgetState extends State<Futurebuilderwidget> {
 
   Future<List<Getnewsmodel>> fetchNews() async {
     Getnewsservice service = Getnewsservice();
-    Future<List<Getnewsmodel>> getnewslist = service.getNews();
+    Future<List<Getnewsmodel>> getnewslist =
+        service.getNews(categoryname:widget.category );
     return getnewslist;
   }
 
-  List<Getnewsmodel> getnewslists = [];
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<Getnewsmodel>>(
